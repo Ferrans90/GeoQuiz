@@ -2,16 +2,16 @@ package com.ferran.geoquiz.Model;
 
 public class Question {
     private int mTextResId;
-    private boolean mAnswerTrue;
+    private boolean mAnswer;
 
-    public Question(int mTextResId, boolean mAnswerTrue) {
+    public Question(int mTextResId, boolean mAnswer) {
         this.mTextResId = mTextResId;
-        this.mAnswerTrue = mAnswerTrue;
+        this.mAnswer = mAnswer;
     }
 
     public Question(Question question) {
         this.mTextResId = question.getmTextResId();
-        this.mAnswerTrue = question.ismAnswerTrue();
+        this.mAnswer = question.ismAnswer();
     }
 
     public int getmTextResId() {
@@ -22,12 +22,12 @@ public class Question {
         this.mTextResId = mTextResId;
     }
 
-    public boolean ismAnswerTrue() {
-        return mAnswerTrue;
+    public boolean ismAnswer() {
+        return mAnswer;
     }
 
-    public void setmAnswerTrue(boolean mAnswerTrue) {
-        this.mAnswerTrue = mAnswerTrue;
+    public void setmAnswer(boolean mAnswer) {
+        this.mAnswer = mAnswer;
     }
 
     @Override
